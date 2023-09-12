@@ -3,7 +3,7 @@ package com.github.zeldigas.text2confl.convert.markdown.diagram
 import assertk.assertThat
 import assertk.assertions.exists
 import assertk.assertions.isEqualTo
-import com.github.zeldigas.text2confl.convert.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension

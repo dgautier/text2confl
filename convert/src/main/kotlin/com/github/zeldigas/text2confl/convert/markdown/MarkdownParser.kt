@@ -1,6 +1,5 @@
 package com.github.zeldigas.text2confl.convert.markdown
 
-import com.github.zeldigas.text2confl.convert.Attachment
 import com.github.zeldigas.text2confl.convert.AttachmentsRegistry
 import com.github.zeldigas.text2confl.convert.ConvertingContext
 import com.github.zeldigas.text2confl.convert.markdown.diagram.DiagramMakers
@@ -8,6 +7,7 @@ import com.github.zeldigas.text2confl.convert.markdown.diagram.DiagramsExtension
 import com.github.zeldigas.text2confl.convert.markdown.ext.SimpleAdmonitionExtension
 import com.github.zeldigas.text2confl.convert.markdown.ext.SimpleAttributesExtension
 import com.github.zeldigas.text2confl.convert.markdown.ext.SimpleMacroExtension
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import com.vladsch.flexmark.ext.attributes.AttributesExtension
 import com.vladsch.flexmark.ext.autolink.AutolinkExtension
 import com.vladsch.flexmark.ext.emoji.EmojiExtension

@@ -1,7 +1,7 @@
 package com.github.zeldigas.text2confl.core
 
-import com.github.zeldigas.text2confl.convert.Page
-import com.github.zeldigas.text2confl.convert.Validation
+import com.github.zeldigas.text2confl.confluence.model.Page
+import com.github.zeldigas.text2confl.confluence.model.Validation
 
 class ContentValidationFailedException(val errors:List<String>): RuntimeException()
 

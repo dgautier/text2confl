@@ -1,6 +1,6 @@
 package com.github.zeldigas.text2confl.convert.confluence
 
-import com.github.zeldigas.text2confl.convert.PageHeader
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import java.nio.file.Path
 import kotlin.io.path.relativeTo
 

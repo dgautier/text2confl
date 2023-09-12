@@ -11,6 +11,9 @@ import com.github.zeldigas.text2confl.convert.markdown.MarkdownConfiguration
 import com.github.zeldigas.text2confl.convert.markdown.MarkdownFileConverter
 import com.github.zeldigas.text2confl.convert.markdown.diagram.DiagramMakersImpl
 import com.github.zeldigas.text2confl.convert.markdown.diagram.createDiagramMakers
+import com.github.zeldigas.text2confl.confluence.model.Page
+import com.github.zeldigas.text2confl.confluence.model.PageContent
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension

@@ -8,8 +8,8 @@ import assertk.assertions.isInstanceOf
 import com.github.zeldigas.confclient.*
 import com.github.zeldigas.confclient.model.*
 import com.github.zeldigas.text2confl.convert.EditorVersion
-import com.github.zeldigas.text2confl.convert.PageContent
-import com.github.zeldigas.text2confl.convert.PageHeader
+import com.github.zeldigas.text2confl.confluence.model.PageContent
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import com.github.zeldigas.text2confl.core.upload.*
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
@@ -453,7 +453,7 @@ internal class PageUploadOperationsImplTest(
         name: String,
         attachmentHash: String,
         fileName: String
-    ): com.github.zeldigas.text2confl.convert.Attachment {
+    ): com.github.zeldigas.text2confl.confluence.model.Attachment {
         return mockk {
             every { attachmentName } returns name
             every { linkName } returns name

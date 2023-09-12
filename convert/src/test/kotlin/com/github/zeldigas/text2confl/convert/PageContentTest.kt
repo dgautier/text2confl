@@ -6,6 +6,10 @@ import assertk.assertions.contains
 import assertk.assertions.isEqualTo
 import assertk.assertions.isInstanceOf
 import assertk.assertions.prop
+import com.github.zeldigas.text2confl.confluence.model.Attachment
+import com.github.zeldigas.text2confl.confluence.model.PageContent
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
+import com.github.zeldigas.text2confl.confluence.model.Validation
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.io.TempDir
 import org.junit.jupiter.params.ParameterizedTest

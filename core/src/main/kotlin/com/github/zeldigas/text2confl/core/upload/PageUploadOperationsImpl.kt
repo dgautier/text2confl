@@ -4,8 +4,8 @@ import com.github.zeldigas.confclient.*
 import com.github.zeldigas.confclient.model.ConfluencePage
 import com.github.zeldigas.confclient.model.PageProperty
 import com.github.zeldigas.text2confl.convert.EditorVersion
-import com.github.zeldigas.text2confl.convert.Page
-import com.github.zeldigas.text2confl.convert.PageContent
+import com.github.zeldigas.text2confl.confluence.model.Page
+import com.github.zeldigas.text2confl.confluence.model.PageContent
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import io.github.oshai.kotlinlogging.KotlinLogging
@@ -191,13 +191,18 @@ internal class PageUploadOperationsImpl(
 
     override suspend fun updatePageLabels(serverPage: ServerPage, content: PageContent) {
         val labels = serverPage.labels.map { it.label ?: it.name }
+        logger.debug { "Server Labels $labels" }
+        logger.debug { "Page Labels $content.labels" }
         if (labels != content.labels) {
 
-            val labelsToDelete = labels - content.labels
+            val labelsToDelete = labels - content.labels.toSet()
             labelsToDelete.forEach { client.deleteLabel(serverPage.id, it) }
-            val labelsToAdd = content.labels - labels
+            val labelsToAdd = content.labels - labels.toSet()
             if (labelsToAdd.isNotEmpty()) {
+                logger.debug { "Adding Labels $labelsToAdd" }
                 client.addLabels(serverPage.id, labelsToAdd)
+            } else {
+                logger.debug { "No Label to Add" }
             }
         }
     }
@@ -276,7 +281,7 @@ private val Map<String, Any?>.attachmentHash: String?
         return """HASH:(\w+)""".toRegex().find(comment)?.groups?.get(1)?.value
     }
 
-private fun com.github.zeldigas.text2confl.convert.Attachment.toAttachmentInput(): PageAttachmentInput =
+private fun com.github.zeldigas.text2confl.confluence.model.Attachment.toAttachmentInput(): PageAttachmentInput =
     PageAttachmentInput(attachmentName, resourceLocation, "HASH:${hash}", resolveContentType(resourceLocation))
 
 private fun resolveContentType(file: Path): String? = CONTENT_TYPES[file.extension.lowercase().trim()]

@@ -1,8 +1,8 @@
 package com.github.zeldigas.text2confl.convert.markdown.diagram
 
-import com.github.zeldigas.text2confl.convert.Attachment
 import com.github.zeldigas.text2confl.convert.markdown.DiagramsConfiguration
-import com.github.zeldigas.text2confl.convert.toBase64
+import com.github.zeldigas.text2confl.confluence.model.Attachment
+import com.github.zeldigas.text2confl.confluence.model.toBase64
 import java.nio.file.Files
 import java.nio.file.Path
 import java.security.MessageDigest

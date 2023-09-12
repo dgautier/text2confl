@@ -2,7 +2,7 @@ package com.github.zeldigas.text2confl.convert.asciidoc
 
 import assertk.Assert
 import assertk.assertions.isEqualTo
-import com.github.zeldigas.text2confl.convert.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import com.github.zeldigas.text2confl.convert.AttachmentCollector
 import com.github.zeldigas.text2confl.convert.AttachmentsRegistry
 import com.github.zeldigas.text2confl.convert.confluence.LanguageMapper

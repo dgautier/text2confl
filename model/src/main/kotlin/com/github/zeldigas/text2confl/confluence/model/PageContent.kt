@@ -1,4 +1,4 @@
-package com.github.zeldigas.text2confl.convert
+package com.github.zeldigas.text2confl.confluence.model
 
 import java.io.ByteArrayInputStream
 import java.nio.file.Path
@@ -12,80 +12,6 @@ import javax.xml.stream.XMLStreamException
 import javax.xml.stream.events.StartElement
 import javax.xml.stream.events.XMLEvent
 import kotlin.io.path.inputStream
-
-
-data class Page(
-    val content: PageContent,
-    val source: Path,
-    val children: List<Page>
-) {
-    val title: String
-        get() = content.header.title
-    val properties: Map<String, Any>
-        get() = content.header.pageProperties
-    val virtual: Boolean
-        get() {
-            val virtualAttr: Any = content.header.attributes["_virtual_"] ?: return false
-            return when (virtualAttr) {
-                is Boolean -> virtualAttr
-                is String -> virtualAttr.toBoolean()
-                else -> false
-            }
-        }
-}
-
-data class PageHeader(
-    val title: String, val attributes: Map<String, Any?>,
-    private val labelsKeys: List<String> = listOf("labels")
-) {
-    val pageProperties: Map<String, Any> = buildMap {
-        val propertyMap = attributes["properties"]
-        if (propertyMap is Map<*, *>) {
-            putAll(propertyMap.filterValues { it != null }.map { (k, v) -> "$k" to v!! })
-        }
-        putAll(attributes.asSequence()
-            .filter { (k, v) -> k.startsWith("property_") && v != null }
-            .map { (k, v) -> k.substringAfter("property_") to v!! }
-        )
-    }
-
-    val pageLabels: List<String>
-        get() {
-            val labels = labelsKeys.map { attributes[it] }.filterNotNull().firstOrNull()
-            return when (labels) {
-                is List<*> -> labels.map { it.toString() }
-                is String -> labels.split(",").map { it.trim() }
-                else -> emptyList()
-            }
-        }
-}
-
-data class Attachment(
-    val attachmentName: String, val linkName: String, val resourceLocation: Path
-) {
-
-    companion object {
-        fun fromLink(name: String, location: Path): Attachment {
-            return Attachment(normalizeName(name), name, location)
-        }
-
-        private fun normalizeName(name: String): String {
-            return name.replace("../", "__").replace("./", "")
-                .replace("/", "_")
-        }
-    }
-
-    val hash: String by lazy {
-        val md = MessageDigest.getInstance("SHA-256")
-        resourceLocation.inputStream().use {
-            val byteArray = ByteArray(4096)
-            val digestInputStream = DigestInputStream(it, md)
-            while (digestInputStream.read(byteArray) != -1) {
-            }
-        }
-        toBase64(md.digest())
-    }
-}
 
 data class PageContent(
     val header: PageHeader,

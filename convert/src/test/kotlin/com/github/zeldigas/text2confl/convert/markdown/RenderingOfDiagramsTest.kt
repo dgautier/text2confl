@@ -2,7 +2,7 @@ package com.github.zeldigas.text2confl.convert.markdown
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.github.zeldigas.text2confl.convert.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import com.github.zeldigas.text2confl.convert.markdown.diagram.DiagramMaker
 import com.github.zeldigas.text2confl.convert.markdown.diagram.ImageInfo
 import io.mockk.every

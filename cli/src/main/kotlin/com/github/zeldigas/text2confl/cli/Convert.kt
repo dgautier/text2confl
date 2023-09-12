@@ -7,11 +7,11 @@ import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.help
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.file
+import com.github.zeldigas.text2confl.confluence.model.Page
 import com.github.zeldigas.text2confl.core.config.createConversionConfig
 import com.github.zeldigas.text2confl.core.config.readDirectoryConfig
 import com.github.zeldigas.text2confl.convert.Converter
 import com.github.zeldigas.text2confl.convert.EditorVersion
-import com.github.zeldigas.text2confl.convert.Page
 import com.github.zeldigas.text2confl.core.ServiceProvider
 import com.github.zeldigas.text2confl.core.export.sanitizeTitle
 import io.ktor.http.*

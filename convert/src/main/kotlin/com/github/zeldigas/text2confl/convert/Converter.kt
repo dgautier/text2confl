@@ -6,6 +6,8 @@ import com.github.zeldigas.text2confl.convert.confluence.LanguageMapper
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
 import com.github.zeldigas.text2confl.convert.markdown.MarkdownConfiguration
 import com.github.zeldigas.text2confl.convert.markdown.MarkdownFileConverter
+import com.github.zeldigas.text2confl.confluence.model.Page
+import com.github.zeldigas.text2confl.confluence.model.PageContent
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path

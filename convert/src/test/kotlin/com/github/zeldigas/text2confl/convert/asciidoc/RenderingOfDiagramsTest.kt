@@ -2,11 +2,11 @@ package com.github.zeldigas.text2confl.convert.asciidoc
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.github.zeldigas.text2confl.convert.Attachment
 import com.github.zeldigas.text2confl.convert.AttachmentCollector
 import com.github.zeldigas.text2confl.convert.AttachmentsRegistry
-import com.github.zeldigas.text2confl.convert.PageHeader
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
+import com.github.zeldigas.text2confl.confluence.model.Attachment
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.io.TempDir
 import java.nio.file.Path

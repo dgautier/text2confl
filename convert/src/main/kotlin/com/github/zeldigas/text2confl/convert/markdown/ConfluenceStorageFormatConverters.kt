@@ -1,10 +1,10 @@
 package com.github.zeldigas.text2confl.convert.markdown
 
-import com.github.zeldigas.text2confl.convert.Attachment
 import com.github.zeldigas.text2confl.convert.ConvertingContext
 import com.github.zeldigas.text2confl.convert.confluence.Anchor
 import com.github.zeldigas.text2confl.convert.confluence.Xref
 import com.github.zeldigas.text2confl.convert.markdown.ext.AttributeRepositoryAware
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import com.vladsch.flexmark.ast.*
 import com.vladsch.flexmark.ext.admonition.AdmonitionBlock
 import com.vladsch.flexmark.ext.attributes.AttributesExtension

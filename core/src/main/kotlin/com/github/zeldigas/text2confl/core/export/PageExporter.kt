@@ -3,7 +3,7 @@ package com.github.zeldigas.text2confl.core.export
 import com.github.zeldigas.confclient.ConfluenceClient
 import com.github.zeldigas.confclient.model.Attachment
 import com.github.zeldigas.confclient.model.ConfluencePage
-import com.github.zeldigas.text2confl.convert.Page
+import com.github.zeldigas.text2confl.confluence.model.Page
 import com.github.zeldigas.text2confl.convert.markdown.export.HtmlToMarkdownConverter
 import java.io.OutputStreamWriter
 import java.nio.file.Path
