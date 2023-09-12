@@ -2,6 +2,8 @@ package com.github.zeldigas.text2confl.convert.asciidoc
 
 import com.github.zeldigas.text2confl.convert.*
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
+import com.github.zeldigas.text2confl.confluence.model.PageContent
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import com.vladsch.flexmark.util.sequence.Escaping
 import org.asciidoctor.ast.Document
 import java.nio.file.Path
