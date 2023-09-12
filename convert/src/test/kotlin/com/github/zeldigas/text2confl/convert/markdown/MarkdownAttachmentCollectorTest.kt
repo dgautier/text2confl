@@ -3,7 +3,7 @@ package com.github.zeldigas.text2confl.convert.markdown
 import assertk.assertThat
 import assertk.assertions.isEmpty
 import assertk.assertions.isEqualTo
-import com.github.zeldigas.text2confl.convert.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import com.github.zeldigas.text2confl.convert.AttachmentsRegistry
 import com.github.zeldigas.text2confl.convert.confluence.Anchor
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider

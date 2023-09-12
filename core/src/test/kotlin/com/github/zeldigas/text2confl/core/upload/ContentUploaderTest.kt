@@ -4,8 +4,8 @@ import assertk.assertFailure
 import assertk.assertions.hasMessage
 import com.github.zeldigas.confclient.ConfluenceClient
 import com.github.zeldigas.confclient.model.PageProperty
+import com.github.zeldigas.text2confl.confluence.model.Page
 import com.github.zeldigas.text2confl.core.config.Cleanup
-import com.github.zeldigas.text2confl.convert.Page
 import com.github.zeldigas.text2confl.core.upload.*
 import io.mockk.*
 import io.mockk.impl.annotations.MockK

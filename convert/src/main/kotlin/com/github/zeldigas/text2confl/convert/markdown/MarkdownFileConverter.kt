@@ -2,6 +2,8 @@ package com.github.zeldigas.text2confl.convert.markdown
 
 import com.github.zeldigas.text2confl.convert.*
 import com.github.zeldigas.text2confl.convert.markdown.diagram.createDiagramMakers
+import com.github.zeldigas.text2confl.confluence.model.PageContent
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import com.vladsch.flexmark.ast.Heading
 import com.vladsch.flexmark.ext.yaml.front.matter.AbstractYamlFrontMatterVisitor
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterBlock

@@ -7,6 +7,7 @@ import com.github.zeldigas.text2confl.convert.confluence.LanguageMapper
 import com.github.zeldigas.text2confl.convert.confluence.LanguageMapperImpl
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
 import com.github.zeldigas.text2confl.convert.markdown.diagram.DiagramMakers
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import kotlin.io.path.Path
 
 internal open class RenderingTestBase {

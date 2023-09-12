@@ -3,9 +3,7 @@ package com.github.zeldigas.text2confl.core
 import assertk.assertFailure
 import assertk.assertions.isEqualTo
 import assertk.assertions.isInstanceOf
-import com.github.zeldigas.text2confl.convert.Validation
-import com.github.zeldigas.text2confl.core.ContentValidationFailedException
-import com.github.zeldigas.text2confl.core.ContentValidatorImpl
+import com.github.zeldigas.text2confl.confluence.model.Validation
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Test

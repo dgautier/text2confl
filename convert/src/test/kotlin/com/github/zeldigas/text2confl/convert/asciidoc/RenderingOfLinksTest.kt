@@ -1,8 +1,8 @@
 package com.github.zeldigas.text2confl.convert.asciidoc
 
 import assertk.assertThat
-import com.github.zeldigas.text2confl.convert.Attachment
-import com.github.zeldigas.text2confl.convert.PageHeader
+import com.github.zeldigas.text2confl.confluence.model.Attachment
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
 import org.junit.jupiter.api.Test
 import kotlin.io.path.Path

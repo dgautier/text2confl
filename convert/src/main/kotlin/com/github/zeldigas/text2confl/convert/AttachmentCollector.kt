@@ -1,6 +1,7 @@
 package com.github.zeldigas.text2confl.convert
 
 import com.github.zeldigas.text2confl.convert.confluence.ReferenceProvider
+import com.github.zeldigas.text2confl.confluence.model.Attachment
 import io.github.oshai.kotlinlogging.KotlinLogging
 import java.net.URI
 import java.nio.file.Path

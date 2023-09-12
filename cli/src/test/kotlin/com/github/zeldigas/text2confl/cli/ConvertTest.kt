@@ -4,9 +4,9 @@ import assertk.assertThat
 import assertk.assertions.exists
 import assertk.assertions.isFalse
 import com.github.ajalt.clikt.core.context
-import com.github.zeldigas.text2confl.convert.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Attachment
+import com.github.zeldigas.text2confl.confluence.model.Page
 import com.github.zeldigas.text2confl.convert.Converter
-import com.github.zeldigas.text2confl.convert.Page
 import com.github.zeldigas.text2confl.core.ContentValidator
 import com.github.zeldigas.text2confl.core.ServiceProvider
 import io.mockk.Runs

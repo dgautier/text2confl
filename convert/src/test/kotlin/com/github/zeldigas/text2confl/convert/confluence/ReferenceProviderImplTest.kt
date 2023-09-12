@@ -2,9 +2,8 @@ package com.github.zeldigas.text2confl.convert.confluence
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import assertk.assertions.isInstanceOf
 import assertk.assertions.isNotNull
-import com.github.zeldigas.text2confl.convert.PageHeader
+import com.github.zeldigas.text2confl.confluence.model.PageHeader
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource

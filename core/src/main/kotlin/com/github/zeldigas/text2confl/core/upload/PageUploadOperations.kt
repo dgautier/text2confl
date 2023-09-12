@@ -3,8 +3,8 @@ package com.github.zeldigas.text2confl.core.upload
 import com.github.zeldigas.confclient.model.Attachment
 import com.github.zeldigas.confclient.model.ConfluencePage
 import com.github.zeldigas.confclient.model.Label
-import com.github.zeldigas.text2confl.convert.Page
-import com.github.zeldigas.text2confl.convert.PageContent
+import com.github.zeldigas.text2confl.confluence.model.Page
+import com.github.zeldigas.text2confl.confluence.model.PageContent
 
 const val HASH_PROPERTY = "contenthash"
 const val TENANT_PROPERTY = "t2ctenant"
